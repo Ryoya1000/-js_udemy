@@ -15,21 +15,15 @@
         <div class="frame__inner">
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                // 関数
-                // const getTax = (price, tax=10) => {
-                //     return price * (tax / 100);
-                // }
+                const zip_pattern = /^\d{3}-?\d{4}$/g;
+                let zip = '123-4522267'
 
-                // let tax = getTax(1980, 7);
-                // document.write(tax);
-
-                for (let i=0; i<10; i++) {
-                    document.write(i);
-                    alert(i);
+                if (zip_pattern.test(zip) === true) {
+                    document.write('正しく入力されました')
+                } else {
+                    document.write('郵便番号はxxx-xxxxの書籍で入力してください')
                 }
-                // alert(i);
             </script>
-
         </div>
     </div>
 </body>

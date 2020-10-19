@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <p>メールアドレス：<input type="email" name="email" id="">
+            <span style="color: #f33"></span>
+            </p>
+            <!-- ここに、JavaScriptを記述します -->
+            <script>
+                const email = document.querySelector('input[name="email"]')
+                email.addEventListener('blur', () => {
+                    if (email.value === '') {
+                        email.style.backgroundColor = "#fcc";
+                        // nextElementSiblingは、「次の要素」という意味
+                        email.nextElementSibling.innerHTML = '※ メールアドレスをご記入ください';
+                    } else {
+                        email.style.backgroundColor = "#fff";
+                        email.nextElementSibling.innerHTML = '';
+                    }
+                });
+
+                // id以外で要素を取得したい場合、
+                // querySelectorやnextElementSiblingを活用することができる
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

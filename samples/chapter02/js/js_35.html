@@ -13,23 +13,14 @@
         <h1 class="frame__title">JavaScript</h1>
 
         <div class="frame__inner">
+            <button id="buy">決済する</button>
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                // 関数
-                // const getTax = (price, tax=10) => {
-                //     return price * (tax / 100);
-                // }
-
-                // let tax = getTax(1980, 7);
-                // document.write(tax);
-
-                for (let i=0; i<10; i++) {
-                    document.write(i);
-                    alert(i);
-                }
-                // alert(i);
+                const btn = document.getElementById('buy');
+                btn.addEventListener('dblclick', () => {
+                    btn.disabled = true;
+                });
             </script>
-
         </div>
     </div>
 </body>
